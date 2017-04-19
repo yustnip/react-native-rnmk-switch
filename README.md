@@ -4,15 +4,23 @@ The package is an almost full copy of the Switch component from [react-native-ma
 
 ## Usage
 
-```jsx
-import Switch from 'react-native-rnmk-switch'
+1. Install:
 
-<Switch
-  trackLength={ 34 }
-  trackSize={ 14 }
-  thumbRadius={ 10 }
-/>
-```
+  ```sh
+  yarn add react-native-rnmk-switch
+  ```
+
+2. Import and use:
+
+  ```jsx
+  import Switch from 'react-native-rnmk-switch'
+
+  <Switch
+    trackLength={ 34 }
+    trackSize={ 14 }
+    thumbRadius={ 10 }
+  />
+  ```
 
 👉 [props reference][switch-js-props-doc] and [example code][toggles-sample]
 
