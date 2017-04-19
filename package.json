@@ -1,5 +1,5 @@
 {
-  "name": "react-native-switch",
+  "name": "react-native-rnmk-switch",
   "version": "0.0.1",
   "description": "Standalone RNMK Switch component",
   "main": "index.js",
@@ -8,18 +8,19 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yustnip/react-native-switch.git"
+    "url": "git+https://github.com/yustnip/react-native-rnmk-switch.git"
   },
   "keywords": [
     "react-native",
-    "switch"
+    "switch",
+    "rnmk"
   ],
   "author": "Nikita Yustovskiy",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/yustnip/react-native-switch/issues"
+    "url": "https://github.com/yustnip/react-native-rnmk-switch/issues"
   },
-  "homepage": "https://github.com/yustnip/react-native-switch#readme",
+  "homepage": "https://github.com/yustnip/react-native-rnmk-switch#readme",
   "dependencies": {
     "ramda": "^0.23.0"
   }
