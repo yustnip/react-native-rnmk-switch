@@ -22,9 +22,16 @@ import {
   View,
 } from 'react-native';
 
-import MKColor from '../MKColor';
-import * as utils from '../utils';
-import { getTheme } from '../theme';
+import * as R from 'ramda';
+const compact = R.reject(R.isNil)
+
+const switchTheme = {
+    onColor: 'rgba(63, 81, 181, 0.4)',
+    offColor: 'rgba(0, 0, 0, 0.25)',
+    thumbOnColor: '#3F51B5',
+    thumbOffColor: '#EAEAEA',
+    rippleColor: 'rgba(63, 81, 181, 0.2)'
+}
 
 // ## <section id='thumb'>Thumb</section>
 // `Thumb` component of the [`Switch`](#switch).
@@ -154,7 +161,7 @@ class Thumb extends Component {
           position: 'absolute',
           width: rippleSize,
           height: rippleSize,
-          backgroundColor: MKColor.Transparent,
+          backgroundColor: 'transparent',
         }]}
       >
         <View  // the circle
@@ -193,7 +200,6 @@ const AnimatedThumb = Animated.createAnimatedComponent(Thumb);
 class Switch extends Component {
   constructor(props) {
     super(props);
-    this.theme = getTheme();
     this._animatedThumbLeft = new Animated.Value(0);
     this.state = {
       trackSize: 0,
@@ -322,9 +328,9 @@ class Switch extends Component {
     this.getThumb().endToggle();
   }
 
-  _getBgColor(theme) {
-    const onColor = this.props.onColor || theme.onColor;
-    const offColor = this.props.offColor || theme.offColor;
+  _getBgColor() {
+    const onColor = this.props.onColor || switchTheme.onColor;
+    const offColor = this.props.offColor || switchTheme.offColor;
     return this.state.checked ? onColor : offColor;
   }
 
@@ -337,7 +343,7 @@ class Switch extends Component {
       onLongPress: this.props.onLongPress,
     };
 
-    const mergedStyle = Object.assign({}, this.theme.switchStyle, utils.compact({
+    const mergedStyle = Object.assign({}, switchTheme, compact({
       onColor: this.props.onColor,
       offColor: this.props.offColor,
       thumbOnColor: this.props.thumbOnColor,
