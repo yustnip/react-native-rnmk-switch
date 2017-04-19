@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/yustnip/react-native-switch/issues"
   },
-  "homepage": "https://github.com/yustnip/react-native-switch#readme"
+  "homepage": "https://github.com/yustnip/react-native-switch#readme",
+  "dependencies": {
+    "ramda": "^0.23.0"
+  }
 }
